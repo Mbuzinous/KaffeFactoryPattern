@@ -32,31 +32,30 @@ namespace KaffeFactoryPattern
             cup3.Brew(); // Output: Brygger en kop te.
 
 
-            void NotFactoryMethodExample()
+            void NotFactoryMethodExample(ClubMember member)
             {
 
-
-
-                string userPreference = "";
-
-
-                if (userPreference.ToLower() == "cappuccino")
+                if (member.BeveragePreference.ToLower() == "cappuccino")
                 {
                     Cappuccino cupOfCappuccino = new Cappuccino();
                 }
 
 
-                if (userPreference.ToLower() == "latte")
+                if (member.BeveragePreference.ToLower() == "latte")
                 {
                     Latte cupOfLatte = new Latte();
                 }
 
 
-                if (userPreference.ToLower() == "tea")
+                if (member.BeveragePreference.ToLower() == "tea")
                 {
                     Tea cupOfTea = new Tea();
                 }
 
+                else
+                {
+                    throw new ArgumentException("Ugyldig kaffetype");
+                }
 
 
             }
