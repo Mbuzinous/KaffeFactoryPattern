@@ -11,7 +11,7 @@ namespace KaffeFactoryPattern.Beverages
     {
         public void Brew()
         {
-            Console.WriteLine("Brygger en kop Te.");
+            Console.WriteLine("Hej og god morgen, jeg kan se at din preference er en Latte, jeg starter med at brygge med det samme!");
         }
     }
 }
